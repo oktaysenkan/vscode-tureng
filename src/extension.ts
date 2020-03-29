@@ -14,8 +14,6 @@ const translate = async () => {
   const word = new Tureng(selectedText, "entr");
 
   word.Translate((list: any) => {
-    console.log(list.Situation.IsFound);
-
     if (!list.Situation.IsFound) {
       if (!list.Situation.Suggestion) {
         vscode.window.showErrorMessage("Translations not found!");
@@ -23,24 +21,25 @@ const translate = async () => {
       }
 
       const suggestions = list.Suggestions.join(", ");
-
-      vscode.window.showWarningMessage("Suggestions: " + suggestions);
+      vscode.window.showWarningMessage(`Suggestions: ${suggestions}`);
       return;
     }
 
-    const results: [] = list.IsEn2Tr
-      ? list.Translations.map((item: any) => item.TermTR)
-      : list.Translations.map((item: any) => item.TermENG);
+    const results: [] = list.Translations.map((item: any) => {
+      const language: string = list.IsEn2Tr ? item.TermTR : item.TermENG;
+      const spaceIndex = language.indexOf(" ");
+      const rawWord = language.substring(0, spaceIndex);
 
-    const document = results.join("\n");
+      return rawWord;
+    });
+
+    const document = results.join(",");
 
     vscode.window.showInformationMessage(document);
   });
 };
 
 export const activate = (context: vscode.ExtensionContext) => {
-  console.log('Congratulations, your extension "vscode-tureng" is now active!');
-
   let disposable = vscode.commands.registerCommand("extension.tureng", () => {
     translate();
   });
