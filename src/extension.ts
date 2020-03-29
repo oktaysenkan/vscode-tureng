@@ -6,20 +6,36 @@ const editor = vscode.window.activeTextEditor;
 const translate = async () => {
   const selectedText = editor?.document.getText(editor.selection);
 
-  if (selectedText) {
-    const word = new Tureng(selectedText, "entr");
-    word.Translate((list: any) => {
-      vscode.window.showInformationMessage(selectedText);
-
-      const result = list.IsEn2Tr
-        ? list.Translations.map((item: any) => item.TermTR)
-        : list.Translations.map((item: any) => item.TermENG);
-
-      console.log(result);
-    });
-  } else {
+  if (!selectedText) {
     vscode.window.showErrorMessage("Not selected any text.");
+    return;
   }
+
+  const word = new Tureng(selectedText, "entr");
+
+  word.Translate((list: any) => {
+    console.log(list.Situation.IsFound);
+
+    if (!list.Situation.IsFound) {
+      if (!list.Situation.Suggestion) {
+        vscode.window.showErrorMessage("Translations not found!");
+        return;
+      }
+
+      const suggestions = list.Suggestions.join(", ");
+
+      vscode.window.showWarningMessage("Suggestions: " + suggestions);
+      return;
+    }
+
+    const results: [] = list.IsEn2Tr
+      ? list.Translations.map((item: any) => item.TermTR)
+      : list.Translations.map((item: any) => item.TermENG);
+
+    const document = results.join("\n");
+
+    vscode.window.showInformationMessage(document);
+  });
 };
 
 export const activate = (context: vscode.ExtensionContext) => {
