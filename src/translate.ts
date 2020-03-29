@@ -17,7 +17,7 @@ const translate = () => {
 
   word.Translate((list: any) => {
     if (!list.Situation.IsFound) {
-      if (!list.Situation.Suggestion) {
+      if (list.Suggestions.length < 1) {
         vscode.window.showErrorMessage(config.TRANSLATION_NOT_FOUND);
         return;
       }
