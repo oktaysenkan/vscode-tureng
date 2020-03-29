@@ -3,7 +3,7 @@
   "displayName": "Tureng",
   "description": "Tureng for VSCode",
   "icon": "logo.png",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "engines": {
     "vscode": "^1.43.0"
   },

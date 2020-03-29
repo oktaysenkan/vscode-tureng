@@ -6,7 +6,7 @@ const editor = vscode.window.activeTextEditor;
 import config from "./configs";
 
 const translate = () => {
-  const selectedText = editor?.document.getText(editor.selection);
+  const selectedText = editor!.document.getText(editor!.selection);
 
   if (!selectedText) {
     vscode.window.showErrorMessage(config.TEXT_NOT_SELECTED);
@@ -29,8 +29,14 @@ const translate = () => {
 
     const results: [] = list.Translations.map((item: any) => {
       const language: string = list.IsEn2Tr ? item.TermTR : item.TermENG;
-      const spaceIndex = language.indexOf(" ");
-      const rawWord = language.substring(0, spaceIndex);
+
+      const squareBracketIndex = language.indexOf("[");
+      const parenthesIndex = language.indexOf("(");
+
+      const separatorIndex =
+        squareBracketIndex === -1 ? parenthesIndex : squareBracketIndex;
+
+      const rawWord = language.substring(0, separatorIndex - 1);
 
       return rawWord;
     });
