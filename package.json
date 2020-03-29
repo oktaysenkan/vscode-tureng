@@ -9,6 +9,15 @@
   "categories": [
     "Other"
   ],
+  "publisher": "oktaysenkan",
+  "author": "Oktay Şenkan <oktay.senkan@gmail.com>",
+  "homepage": "https://github.com/oktaysenkan/project#readme",
+  "repository": "https://github.com/oktaysenkan/project",
+  "keywords": [
+    "tureng",
+    "translate",
+    "vscode"
+  ],
   "activationEvents": [
     "onCommand:extension.tureng"
   ],
