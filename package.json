@@ -2,7 +2,8 @@
   "name": "vscode-tureng",
   "displayName": "Tureng",
   "description": "Tureng for VSCode",
-  "version": "0.0.1",
+  "icon": "logo.png",
+  "version": "1.0.0",
   "engines": {
     "vscode": "^1.43.0"
   },
