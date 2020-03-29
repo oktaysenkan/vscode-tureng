@@ -13,7 +13,10 @@
   "publisher": "oktaysenkan",
   "author": "Oktay Şenkan <oktay.senkan@gmail.com>",
   "homepage": "https://github.com/oktaysenkan/vscode-tureng#readme",
-  "repository": "https://github.com/oktaysenkan/vscode-tureng",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/oktaysenkan/vscode-tureng"
+  },
   "keywords": [
     "tureng",
     "translate",
