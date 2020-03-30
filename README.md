@@ -11,9 +11,16 @@ Select word(s) and click right click.
 ## Screenshots
 
 ![image](https://user-images.githubusercontent.com/42527467/77858319-7583cc80-720b-11ea-9714-eb452798d942.png)
+
 ![image](https://user-images.githubusercontent.com/42527467/77858347-a06e2080-720b-11ea-924d-4fd99016eb5e.png)
-![image](https://user-images.githubusercontent.com/42527467/77858076-d90cfa80-7209-11ea-9950-ea0b831af589.png)
+
+![image](https://user-images.githubusercontent.com/42527467/77868189-e85c6a00-7242-11ea-991a-b913f6135d86.png)
+
 ![image](https://user-images.githubusercontent.com/42527467/77858236-d232b780-720a-11ea-8377-3084ec648102.png)
+
+![image](https://im4.ezgif.com/tmp/ezgif-4-634089998be6.gif)
+
+![image](https://im4.ezgif.com/tmp/ezgif-4-79880938d39b.gif)
 
 ## Contributors
 
