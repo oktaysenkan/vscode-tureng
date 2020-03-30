@@ -4,23 +4,17 @@ This extension provides you [Tureng](https://tureng.com/) translation service fo
 
 ## Usage
 
-Select word(s) and click right click.
+Select word(s) and click right click or use from command palette.
 
-![image](https://user-images.githubusercontent.com/42527467/77858472-81bc5980-720c-11ea-98af-4bec6c4b21cb.png)
+<img width="235" alt="Screen Shot 2020-03-30 at 12 06 40 PM" src="https://user-images.githubusercontent.com/42527467/77896046-4fe4da80-7280-11ea-8966-f29fe52de12a.png">
 
 ## Screenshots
 
-![image](https://user-images.githubusercontent.com/42527467/77858319-7583cc80-720b-11ea-9714-eb452798d942.png)
+![image](https://s5.gifyu.com/images/Screen-Recording-2020-03-30-at-11.37.49-AM.gif)
 
-![image](https://user-images.githubusercontent.com/42527467/77858347-a06e2080-720b-11ea-924d-4fd99016eb5e.png)
+![image](https://s5.gifyu.com/images/Screen-Recording-2020-03-30-at-11.41.46-AM.gif)
 
-![image](https://user-images.githubusercontent.com/42527467/77868189-e85c6a00-7242-11ea-991a-b913f6135d86.png)
-
-![image](https://user-images.githubusercontent.com/42527467/77858236-d232b780-720a-11ea-8377-3084ec648102.png)
-
-![image](https://im4.ezgif.com/tmp/ezgif-4-634089998be6.gif)
-
-![image](https://im4.ezgif.com/tmp/ezgif-4-79880938d39b.gif)
+![image](https://s5.gifyu.com/images/Screen-Recording-2020-03-30-at-11.51.21-AM.gif)
 
 ## Contributors
 
